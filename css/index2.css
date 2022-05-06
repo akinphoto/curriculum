@@ -1,0 +1,130 @@
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: url('../img/montaña.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+h2,table{
+font-family: 'Courier New', Courier, monospace;
+}
+
+.container-fluid{
+    width: 40%;
+    margin:0 auto;
+    margin-top: 100px;
+}
+
+.container-fluid h2::after{
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    width: 67px;
+    background-color: black;
+}
+/* porque el titulo i la img queden en el centro
+si no queremos sacamos solo el justify-content:center; */
+.textimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* img{
+margin:5px;
+width: 65px;
+height: 65px;
+border-radius: 50px;
+
+} */
+
+.accordion{
+    width: 100%;
+    padding: 0 5px;
+    border: 5px solid black;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    background-color: white;
+    
+}
+
+.accordion .icon {
+    margin: 0 10px 0 0 ;
+    width: 50px;
+    height: 50px;
+    background: url("../img/toggle_on.png") no-repeat;
+    float: left;
+    transition: all .5s ease-in;
+}
+.accordion h5{
+    font-size: 22px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color:black;
+    /* Hace referencia al boton y color de las letras 
+    antes de activarse */
+}
+
+.active .icon{
+background: url("../img/toggle_off.png") no-repeat; 
+/* img toggle en off */
+}
+
+.active{
+    background-color: rgb(149, 190, 149);
+   
+}
+
+.active h5{
+    color: black;
+   
+}
+
+.panel{
+    padding: 0 15px;
+    border-left: 1px solid black;
+    /* linia del lado */
+    margin-left: 25px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    /* obertura de el panel */
+    transition: all .5s ease-in;
+    /* hace referencia a la img cuando se mueve */
+}
+
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    /*para quitar el doble borde  */
+    }
+    td {
+    border: 2px solid black;
+    }
+    th, td{
+    padding: 5px;
+    }
+    td{
+    text-align: center;
+    }
+    h1{
+    text-align: center;
+    }
+    td.lenguas{
+    text-align: left;
+    width: 12%
+    /* el cuadro de las lenguas queda más ajustado */
+    }
+
